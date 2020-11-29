@@ -1,0 +1,92 @@
+.container{
+  max-width: 120rem; // = 1200px
+  min-height: 95vh;
+}
+
+.container{
+  //padding: 2rem;
+  @media only screen and (max-width: 68.75em){
+    max-width: 100%;
+  }
+}
+.header{
+  font-size: 1.4rem; //  = 14px
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content{
+  display: flex;
+}
+@media only screen and (max-width: 56.25em){
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .header {
+    flex-wrap: wrap; // pour passer la barre de recherche en dessous
+    height: 11rem; // on augmente la hauteur
+    align-content: space-around; // pour régler l'espace entre les rangées du container afin de les centrer verticalement
+  }
+}
+
+.sidebar{
+ background-color: var(--color-grey-dark-1);
+ flex: 0 0 18%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+.hotel-view{
+  flex: 1; // on veut qu'il prenne toute l espace dispo restante
+}
+
+.detail{
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .detail{
+    padding: 3rem;
+  }
+  .description {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .detail {
+    flex-direction: column; // pour mettre les sections description et user-reviews l'un en-dessous de l'autre
+  }
+  .description {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
